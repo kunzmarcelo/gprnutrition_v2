@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Management;
 
-use App\Animal;
-use App\Delivery;
-use App\User;
-use App\AdminUser;
-use App\Reproduction;
-use App\Coverage;
-use Carbon\Carbon;
+
 use App\Http\Controllers\Controller;
+use App\Models\AdminUser;
+use App\Models\Animal;
+use App\Models\Coverage;
+use App\Models\Delivery;
+use App\Models\Reproduction;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class UserController extends Controller

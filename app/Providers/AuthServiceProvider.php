@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Permission;
-use App\User;
+use App\Models\Permission;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
@@ -29,7 +29,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-      /*  $resources = \App\Resource::all();
+        $resources = \App\Models\Resource::all();
 
         foreach ($resources as $resource) {
   // print($resource->roles->contains($user->role));
@@ -37,7 +37,7 @@ class AuthServiceProvider extends ServiceProvider
 
             return $resource->roles->contains($user->role);
           });
-        }*/
+        }
 
         //dd(Gate::abilities());
 

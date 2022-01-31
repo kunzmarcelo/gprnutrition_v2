@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
-use UxWeb\SweetAlert\SweetAlert;
-use Illuminate\Http\Request;
 use App\Http\Requests\LotFormRequest;
-use App\Lot;
+use App\Models\Lot;
+use Illuminate\Http\Request;
+
 
 class LotController extends Controller
 {

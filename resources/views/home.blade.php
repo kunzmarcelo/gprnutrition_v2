@@ -30,7 +30,7 @@
 <section class="content">
     <div class="container-fluid">
 
-        {{-- @include('painel.home_includes.inline_cards') --}}
+         @include('painel.home_includes.inline_cards')
 
 
         @include('painel.home_includes.lista_prenhas')
@@ -40,9 +40,9 @@
 
 
 
-        {{-- @include('painel.home_includes.producao_animal') --}}
+         @include('painel.home_includes.producao_animal') 
 
-        {{-- @include('painel.home_includes.producao_mensal') --}}
+         @include('painel.home_includes.producao_mensal') 
 
     </div>
 </section>

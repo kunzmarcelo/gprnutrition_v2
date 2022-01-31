@@ -1,6 +1,4 @@
-@extends('adminlte::page')
-
-@section('title', 'Admin Dashboard')
+@extends('layouts.app')
 @section('css')
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>

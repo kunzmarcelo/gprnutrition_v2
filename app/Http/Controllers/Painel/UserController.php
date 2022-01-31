@@ -5,15 +5,11 @@ namespace App\Http\Controllers\Painel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserFormRequest;
-use App\Delivery;
-use App\Reproduction;
-use App\Animal;
-use App\User;
-use App\Role;
-use App\Permission;
-use App\Coverage;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use App\Models\Animal;
+use App\Models\Coverage;
+use App\Models\Delivery;
+use App\Models\Reproduction;
+use App\Models\User;
 use Carbon\Carbon;
 
 
@@ -134,7 +130,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UserFormRequest $request)
+    public function update(Request $request)
     {
       $data = $request->all();
       if($data['password']!=null){

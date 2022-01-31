@@ -1,5 +1,4 @@
-@extends('adminlte::page')
-@section('title', 'Nutrition')
+@extends('layouts.app')
 @section('content')
 
 <section class="content-header">
@@ -62,7 +61,7 @@
 
                                     @foreach ($results as $key => $value)
                                     <tr>
-                                        <td>{{Carbon::parse($key)->format('d/m/Y')}}</td>
+                                        <td>{{Carbon\Carbon::parse($key)->format('d/m/Y')}}</td>
                                         <td>
                                             <a class="btn btn-info" href="{{url('painel/fechamento_dia',$key)}}">
                                                 <i class="fas fa-folder">

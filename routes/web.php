@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Painel\AdminAuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,6 +70,7 @@ Route::group(['prefix'=>'painel','middleware' => ['auth']], function() {
 
   Route::resource('medicamento', 'Painel\MedicineController');
   Route::resource('cobertura', 'Painel\CoverageController');
+  Route::resource('assistente', 'Painel\AssistantController');
 
 
 });

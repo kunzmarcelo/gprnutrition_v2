@@ -1,5 +1,4 @@
-@extends('adminlte::page')
-@section('title', 'Nutrition')
+@extends('layouts.app')
 @section('content')
 
 <section class="content-header">

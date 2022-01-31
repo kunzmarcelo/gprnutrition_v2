@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
-use App\Animal;
+use App\Models\Animal;
+use App\Models\Production;
 use Illuminate\Http\Request;
-use App\Production;
-use UxWeb\SweetAlert\SweetAlert;
+
 
 class ProductionController extends Controller
 {

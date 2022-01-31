@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use App\User;
-use App\Role;
-use App\Animal;
-use App\Delivery;
-use App\Setting;
-use App\Coverage;
-use App\Production;
-use App\Reproduction;
+use App\Models\User;
+use App\Models\Role;
+use App\Models\Animal;
+use App\Models\Delivery;
+use App\Models\Setting;
+use App\Models\Coverage;
+use App\Models\Production;
+use App\Models\Reproduction;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 use Carbon\Carbon;
 class HomeController extends Controller
@@ -206,52 +206,5 @@ class HomeController extends Controller
         }
 
 
-/*
-
-      if( Auth::user()->level  == 'admin' || Auth::user()->level  == 'gerente' && Auth::user()->status == 'sim') {
-            $now = Carbon::now()->format('m');
-
-            // /$results = $this->delivery->whereMonth('collection_date', '=', $now)->get();
-            $results = Delivery::whereMonth('collection_date', '=', $now)->get();
-
-            $animalsActive = Animal::where('active','=','sim')->count();
-            $animalsTotal = Animal::count();
-            $productionTotal = Delivery::whereMonth('collection_date', '=', $now)->sum('total_liters_produced');
-            $mediaDel = Reproduction::avg('del');
-            $production = Animal::with('productions')->where('user_id','=',auth()->user()->id)
-                       ->whereHas('Productions')->get();
-            return view('home',compact('results','animalsActive','animalsTotal','productionTotal','mediaDel','production'));
-
-
-        }else{
-          if( Auth::user()->level  == 'produtor' && Auth::user()->status == 'sim') {
-
-
-
-
-
-              // return view('home',compact('results','animalsActive','animalsTotal','productionTotal','mediaDel','production'));
-          }
-          else{
-            abort(401, 'Something went wrong');
-          }
-      }
-*/
-
-
-
-        // if(Gate::denies('produtor')){
-        //
-        //     $now = Carbon::now()->format('m');
-        //
-        //     // /$results = $this->delivery->whereMonth('collection_date', '=', $now)->get();
-        //     $results = $this->delivery->where('user_id','=',auth()->user()->id)->whereMonth('collection_date', '=', $now)->get();
-        //
-        //     $animalsActive = Animal::where('active','=','sim')->where('user_id','=',auth()->user()->id)->count();
-        //     $animalsTotal = Animal::where('user_id','=',auth()->user()->id)->count();
-        //     $productionTotal = Delivery::whereMonth('collection_date', '=', $now)->where('user_id','=',auth()->user()->id)->sum('total_liters_produced');
-        //
-        //       return view('home',compact('results','animalsActive','animalsTotal','productionTotal'));
-        //     }
     }
 }

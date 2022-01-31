@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin;
+use App\Models\AdminUser;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminUserController extends Controller
@@ -24,8 +27,8 @@ class AdminUserController extends Controller
      */
     public function create()
     {
-      $users = \App\User::where('level','produtor')->get();
-      $managements = \App\Admin::where('level','<>','admin')->get();
+      $users = User::where('level','produtor')->get();
+      $managements = Admin::where('level','<>','admin')->get();
       return view('adminuser.create', compact('users','managements'));
     }
 
@@ -40,7 +43,7 @@ class AdminUserController extends Controller
       $all = $request->all();
        //dd($all);
 
-      $insert = \App\AdminUser::create($all);
+      $insert = AdminUser::create($all);
 
       if ($insert) {
         alert()->success('Registro inserido!','Sucesso')->persistent('Fechar')->autoclose(1500);

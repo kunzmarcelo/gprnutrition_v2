@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
-use App\Animal;
-use App\Medicine;
-use Illuminate\Http\Request;
-use \App\AnimalMedicine;
+use App\Models\Animal;
+use App\Models\AnimalMedicine;
+use App\Models\Medicine;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
+
 
 class AnimalMedicineController extends Controller
 {

@@ -3,12 +3,11 @@
 namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
-use App\Reproduction;
-use App\Animal;
-use Illuminate\Http\Request;
+use App\Models\Animal;
+use App\Models\Reproduction;
+use App\Models\Setting;
 use Carbon\Carbon;
-use PDF;
-use App\Setting;
+use Illuminate\Http\Request;
 
 class ReproductionController extends Controller
 {

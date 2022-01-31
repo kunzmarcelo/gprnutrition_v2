@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Delivery;
-use LaravelDaily\LaravelCharts\Classes\LaravelChart;
+use App\Models\Delivery;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
+
 
 class DeliveryController extends Controller
 {

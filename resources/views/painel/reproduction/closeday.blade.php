@@ -1,5 +1,4 @@
-@extends('adminlte::page')
-@section('title', 'Nutrition')
+@extends('layouts.app')
 @section('content')
 
 <section class="content-header">
@@ -34,7 +33,7 @@
                             <h4>
                                 <img src="{{url('vendor/adminlte/dist/img/gpr_site.png')}}" style="height:70px; width: 70px">
                                 Nutrição Animal
-                                <small class="float-right">Realizado em: {{Carbon::parse($date)->format('d/m/Y')}}</small>
+                                <small class="float-right">Realizado em: {{Carbon\Carbon::parse($date)->format('d/m/Y')}}</small>
                             </h4>
                         </div>
                         <!-- /.col -->

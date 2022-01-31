@@ -2,17 +2,15 @@
 
 namespace App\Http\Controllers\Painel;
 
+
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\AnimalFormRequest;
-use App\Setting;
-use App\Animal;
-use App\Coverage;
-use App\Lot;
+use App\Models\Animal;
+use App\Models\Lot;
+use App\Models\Setting;
+use Illuminate\Http\Request;
 use Carbon\Carbon;
-use App\DataModel;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class AnimalController extends Controller {
     private $animal;
@@ -24,9 +22,7 @@ class AnimalController extends Controller {
 
     public function index() {
 
-$menu = new DataModel();
-$leftmenu = $menu->getmenu();
-dd($leftmenu);
+
         $results = $this->animal->orderBy( 'id', 'ASC' )->where( 'user_id', '=', auth()->user()->id )->get();
 
 
@@ -228,7 +224,7 @@ dd($leftmenu);
         $iterable = $this->animal
         ->where( 'user_id', '=', auth()->user()->id )->get();
 
-        return \PDF::loadView( 'painel.animals.downloadPDF', compact( 'iterable' ) )
+        return \Barryvdh\DomPDF\Facade\Pdf::loadView( 'painel.animals.downloadPDF', compact( 'iterable' ) )
 
         ->setPaper( 'a4', 'landscape' )
         ->download( 'relatorio.pdf' );

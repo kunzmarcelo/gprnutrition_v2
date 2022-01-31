@@ -2,10 +2,10 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateStatesTable extends Migration
+class CreateBreedsTable extends Migration
 {
-
     /**
      * Run the migrations.
      *
@@ -13,17 +13,11 @@ class CreateStatesTable extends Migration
      */
     public function up()
     {
-
-        Schema::create('states', function (Blueprint $table) {
-
-            $table->increments('id');
-            $table->string('name', 64)->unique();
-            $table->string('abbr', 2)->unique();
+        Schema::create('breeds', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
             $table->timestamps();
-            $table->softDeletes();
-
         });
-
     }
 
     /**
@@ -33,9 +27,6 @@ class CreateStatesTable extends Migration
      */
     public function down()
     {
-
-        Schema::drop('states');
-
+        Schema::dropIfExists('breeds');
     }
-
 }

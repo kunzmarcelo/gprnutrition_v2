@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
-use App\Production;
-use App\Stock;
-use App\Animal;
-use App\Challenge;
-use Illuminate\Http\Request;
+use App\Models\Animal;
+use App\Models\Challenge;
+use App\Models\Production;
+use App\Models\Stock;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class ChallengeController extends Controller
 {

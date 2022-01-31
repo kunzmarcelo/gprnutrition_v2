@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
-use App\Stock;
+use App\Models\Stock;
 use Illuminate\Http\Request;
 
 class StockController extends Controller

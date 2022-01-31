@@ -4,17 +4,13 @@ namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CoverageFormRequest;
-use App\Setting;
-use App\Procedure;
-use App\Animal;
-use App\Coverage;
-use App\CoverageCount;
-use App\Employee;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Models\Animal;
+use App\Models\Coverage;
+use App\Models\CoverageCount;
+use App\Models\Employe;
+use App\Models\Setting;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Request;
 
 class CoverageController extends Controller
 {
@@ -79,7 +75,7 @@ class CoverageController extends Controller
 
 
 
-    $employees = Employee::where('user_id', '=', auth()->user()->id)->get();
+    $employees = Employe::where('user_id', '=', auth()->user()->id)->get();
     $setting = Setting::where('user_id', '=', auth()->user()->id)->first();
     return view('painel.coverage.create', compact('animals', 'employees', 'setting'));
   }

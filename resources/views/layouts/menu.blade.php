@@ -11,7 +11,7 @@
         <i class="nav-icon far fa-image"></i>
         <p>Gallery</p>
     </a>
-</li> --}}
+</li> 
 
 @foreach ($menu as $item=>$value)
 
@@ -82,7 +82,7 @@
     @endif
     @endforeach
 
-    {{--
+    --}}
 
 <li class="nav-item has-treeview ">
     <a class="nav-link  " href="">
@@ -339,4 +339,4 @@
             Animais
         </p>
     </a>
-</li> --}}
+</li>

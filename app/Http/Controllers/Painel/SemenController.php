@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Painel;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SemenFormRequest;
+use App\Models\Blood;
+use App\Models\Breed;
+use App\Models\Semen;
 use Illuminate\Http\Request;
-use App\Blood;
-use App\Breed;
-use App\Semen;
+
 
 class SemenController extends Controller
 {
