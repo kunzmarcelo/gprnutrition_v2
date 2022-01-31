@@ -29,7 +29,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        $resources = \App\Resource::all();
+      /*  $resources = \App\Resource::all();
 
         foreach ($resources as $resource) {
   // print($resource->roles->contains($user->role));
@@ -37,7 +37,7 @@ class AuthServiceProvider extends ServiceProvider
 
             return $resource->roles->contains($user->role);
           });
-        }
+        }*/
 
         //dd(Gate::abilities());
 
